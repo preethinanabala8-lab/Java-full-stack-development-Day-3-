@@ -1,0 +1,35 @@
+// 1. Pure Function
+// Always returns the same output for the same input and has no side effects.
+function addPure(a, b) {
+    return a + b;
+}
+
+console.log(addPure(5, 10)); // Outputs: 15
+
+
+// 2. Anonymous Function
+// A function without a name, assigned here to a variable.
+const multiply = function(a, b) {
+    return a * b;
+};
+
+console.log(multiply(4, 5)); // Outputs: 20
+
+
+// 3. Arrow Function
+// Concise syntax for writing functions.
+const square = n => n * n;
+
+console.log(square(4)); // Outputs: 16
+
+
+// 4. Callback Function
+// A function passed into another function as an argument to be executed later.
+function processData(value, callback) {
+    const result = value * 2;
+    callback(result);
+}
+
+processData(10, function(output) {
+    console.log("Processed result:", output); // Outputs: Processed result: 20
+});
